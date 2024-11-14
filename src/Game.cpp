@@ -185,7 +185,6 @@ void Game::spawnSnake()
 void Game::spawnApple()
 {
     bool validPosition;
-    std::cout << "Executed\n";
     do
     {
         apple = sf::Vector2i(rand() % 12, rand() % 12);
@@ -193,7 +192,6 @@ void Game::spawnApple()
         {
             return segment == apple;
         });
-        std::cout << "Re-executed\n";
     } while (!validPosition);
 }
 
