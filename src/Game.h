@@ -60,27 +60,3 @@ public:
 
     void run();
 };
-
-
-class Button
-{
-private:
-    enum button_states{BTN_IDLE = 0, BTN_HOVER, BTN_PRESSED};
-    short unsigned buttonState;
-
-    sf::RectangleShape shape;
-    sf::Font* font;
-    sf::Text text;
-
-    sf::Color textIdleColor;
-    sf::Color textHoverColor;
-
-public:
-    Button(const float& x, const float& y, const std::string& text, const int& characterSize);
-    ~Button();
-
-    const bool isPressed();
-
-    void update();
-    void rander();
-};
